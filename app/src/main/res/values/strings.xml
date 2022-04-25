@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Toyoda_WageCalculator</string>
+    <string-array name="employeeTypes">
+        <item>Regualar</item>
+        <item>Probationary</item>
+        <item>Part-time</item>
+    </string-array>
+    <string name="calculator">Wage Calculator</string>
+    <string name="calculate">Calculate</string>
+    <string name="name">Name</string>
+    <string name="enterName">Enter name…</string>
+    <string name="hours">Hours</string>
+    <string name="enterHours">Enter hours…</string>
+    <string name="type">Employee Type</string>
+</resources>
