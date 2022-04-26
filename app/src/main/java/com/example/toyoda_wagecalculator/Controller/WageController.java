@@ -9,7 +9,6 @@ public class WageController {
     static WageModel variables = new WageModel();
 
     public static void Calculator(int time, String employeeType) {
-
         if(time <= 8) {
             variables.setTime(time);
             variables.setOTWage(0);
@@ -24,18 +23,24 @@ public class WageController {
                 case "Part-time":
                     variables.setRegWage(variables.getTime()*75);
             }
+            variables.setTotalWage(variables.getRegWage());
         } else {
             variables.setTime(time);
+            variables.setOT(time - 8);
             switch (employeeType) {
                 case "Regular":
-                    //samseng
+                    variables.setOTWage(variables.getOTWage()*115);
+                    variables.setRegWage(800);
                     break;
                 case "Probationary":
-                    //samseng
+                    variables.setOTWage(variables.getOTWage()*100);
+                    variables.setRegWage(720);
                     break;
                 case "Part-time":
-                    //samseng
+                    variables.setOTWage(variables.getOTWage()*90);
+                    variables.setRegWage(600);
             }
+            variables.setTotalWage(variables.getOTWage() + variables.getRegWage());
         }
     }
 
@@ -44,6 +49,7 @@ public class WageController {
         wageOutput.setText(Integer.toString(variables.getTotalWage()));
         regOutput.setText(Integer.toString(variables.getRegWage()));
         OTwageOutput.setText(Integer.toString(variables.getOTWage()));
-        timeOutput.setText(Integer.toString(variables.getOT()));
+        timeOutput.setText(Integer.toString(variables.getTime()));
+        OTOutput.setText(Integer.toString(variables.getOT()));
     }
 }
