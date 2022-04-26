@@ -1,15 +1,23 @@
 <resources>
     <string name="app_name">Toyoda_WageCalculator</string>
     <string-array name="employeeTypes">
-        <item>Regualar</item>
+        <item>Regular</item>
         <item>Probationary</item>
         <item>Part-time</item>
     </string-array>
     <string name="calculator">Wage Calculator</string>
     <string name="calculate">Calculate</string>
-    <string name="name">Name</string>
+    <string name="name">Name:</string>
     <string name="enterName">Enter name…</string>
-    <string name="hours">Hours</string>
+    <string name="hours">Hours:</string>
     <string name="enterHours">Enter hours…</string>
-    <string name="type">Employee Type</string>
+    <string name="type">Employee Type:</string>
+    <string name="result">Result</string>
+    <string name="totalWage">Total Wage:</string>
+    <string name="regWage">Regular Wage:</string>
+    <string name="OTWage">Overtime Wage:</string>
+    <string name="OT">Overtime:</string>
+    <string name="output">N/A</string>
+    <string name="back">Return</string>
+    <string name="samseng">what you want?</string>
 </resources>

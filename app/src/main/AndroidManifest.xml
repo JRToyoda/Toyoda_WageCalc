@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Toyoda_WageCalculator">
         <activity
-            android:name=".View.MainActivity"
+            android:name=".View.InputView"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
