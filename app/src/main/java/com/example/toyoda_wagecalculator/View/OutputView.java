@@ -1,6 +1,7 @@
 package com.example.toyoda_wagecalculator.View;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.Window;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.toyoda_wagecalculator.Controller.WageController;
 import com.example.toyoda_wagecalculator.R;
 
 import java.util.Objects;
@@ -36,5 +38,20 @@ public class OutputView extends AppCompatActivity {
         time = findViewById(R.id.timeOutput);
         OT = findViewById(R.id.OTOutput);
         back = findViewById(R.id.button2);
+
+        back.setOnClickListener(v -> {
+            Intent back = new Intent(this, InputView.class);
+            startActivity(back);
+        });
+
+        Intent output = getIntent();
+        String Name = output.getStringExtra("name");
+        String Type = output.getStringExtra("type");
+        int Time = output.getIntExtra("time",0);
+        name.setText(Name);
+        type.setText(Type);
+        WageController.Calculator(Time, Type);
+        WageController.Output(totalWage, regWage, OTWage, time, OT);
+
     }
 }

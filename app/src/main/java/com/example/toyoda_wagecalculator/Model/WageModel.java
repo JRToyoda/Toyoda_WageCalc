@@ -1,15 +1,15 @@
 package com.example.toyoda_wagecalculator.Model;
 
 public class WageModel {
-    private String name, employeeType;
+    private String name, type;
     private int totalWage, OTWage, regWage, time, OT;
 
     //getters
     public String getName() {
         return name;
     }
-    public String getEmployeeType() {
-        return employeeType;
+    public String getType() {
+        return type;
     }
     public int getTotalWage() {
         return totalWage;
@@ -31,8 +31,8 @@ public class WageModel {
     public void setName(String name) {
         this.name = name;
     }
-    public void setEmployeeType(String employeeType) {
-        this.employeeType = employeeType;
+    public void setType(String type) {
+        this.type = type;
     }
     public void setTotalWage(int totalWage) {
         this.totalWage = totalWage;
