@@ -50,7 +50,7 @@ public class OutputView extends AppCompatActivity {
         int Time = output.getIntExtra("time",0);
         name.setText(Name);
         type.setText(Type);
-        WageController.Calculator(Time, Type);
+        WageController.Calculator(Type, Time);
         WageController.Output(totalWage, regWage, OTWage, time, OT);
 
     }

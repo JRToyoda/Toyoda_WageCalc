@@ -8,12 +8,13 @@ import com.example.toyoda_wagecalculator.Model.WageModel;
 public class WageController {
     static WageModel variable = new WageModel();
 
-    public static void Calculator(int time, String employeeType) {
+    public static void Calculator(String type, int time) {
+        //regular hours
         if(time <= 8) {
             variable.setTime(time);
             variable.setOTWage(0);
             variable.setOT(0);
-            switch (employeeType) {
+            switch (type) {
                 case "Regular":
                     variable.setRegWage(variable.getTime()*100);
                     break;
@@ -25,9 +26,10 @@ public class WageController {
             }
             variable.setTotalWage(variable.getRegWage());
         } else {
+            //Overtime
             variable.setTime(time);
             variable.setOT(time - 8);
-            switch (employeeType) {
+            switch (type) {
                 case "Regular":
                     variable.setOTWage(variable.getOT()*115);
                     variable.setRegWage(800);
